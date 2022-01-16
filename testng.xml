@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="CRMPRO Application">
+
+	<listeners>
+		<listener class-name="com.listeners.ExtentListener" />
+		<listener class-name="com.listeners.AllureListener" />
+		<!-- listener class-name="com.listeners.RetryListener" / -->
+	</listeners>
+
+	<test thread-count="5" name="Application Page Functionalities">
+		<classes>
+			<class name="com.test.LoginPageTest" />
+			<class name="com.test.HomePageTest" />
+			<class name="com.test.ContactsPageTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
