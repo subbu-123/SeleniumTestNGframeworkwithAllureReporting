@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content failed suite-CRMPRO_Application">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.ContactsPageTest" class="method navigator-link" hash-for-method="validateUserIsAbleToCreateANewContact(Amrit, Srivastava, Eli Lilly, uvc@456)">validateUserIsAbleToCreateANewContact(Amrit, Srivastava, Eli Lilly, uvc@456)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.HomePageTest" class="method navigator-link" hash-for-method="validateClickingOnContactsLink">validateClickingOnContactsLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.HomePageTest" class="method navigator-link" hash-for-method="validateHomePage">validateHomePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-CRMPRO_Application -->
@@ -116,12 +121,17 @@
                     <div class="method-list-content passed suite-CRMPRO_Application">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.ContactsPageTest" class="method navigator-link" hash-for-method="validateUserIsAbleToCreateANewContact(Subhankar, sahoo, TCS, abc@256)">validateUserIsAbleToCreateANewContact(Subhankar, sahoo, TCS, abc@256)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.LoginPageTest" class="method navigator-link" hash-for-method="validateLoginPageTitle">validateLoginPageTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.ContactsPageTest" class="method navigator-link" hash-for-method="validateUserOnContactsPage">validateUserOnContactsPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.LoginPageTest" class="method navigator-link" hash-for-method="validateUserInLoginPageOfCRMApplication">validateUserInLoginPageOfCRMApplication</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CRMPRO_Application" title="com.test.LoginPageTest" class="method navigator-link" hash-for-method="validateUserLogin">validateUserLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CRMPRO_Application -->
@@ -139,25 +149,37 @@
           <div class="suite-CRMPRO_Application-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.test.ContactsPageTest</span>
+              <span class="class-name">com.test.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateUserIsAbleToCreateANewContact(Amrit, Srivastava, Eli Lilly, uvc@456)">
-                  </a> <!-- validateUserIsAbleToCreateANewContact(Amrit, Srivastava, Eli Lilly, uvc@456) -->
-                  <span class="method-name">validateUserIsAbleToCreateANewContact</span>
-                  <span class="parameters">(Amrit, Srivastava, Eli Lilly, uvc@456)</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+                  <a name="validateClickingOnContactsLink">
+                  </a> <!-- validateClickingOnContactsLink -->
+                  <span class="method-name">validateClickingOnContactsLink</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Must provide a location for a move action.
+	at org.openqa.selenium.interactions.MoveMouseAction.&lt;init&gt;(MoveMouseAction.java:37)
+	at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:362)
+	at com.pages.HomePage.clickOnContactsLink(HomePage.java:89)
+	at com.test.HomePageTest.validateClickingOnContactsLink(HomePageTest.java:60)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateHomePage">
+                  </a> <!-- validateHomePage -->
+                  <span class="method-name">validateHomePage</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;Subhankar Sahoo&apos;]&quot;}
   (Session info: chrome=97.0.4692.71)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-PA5U02U&apos;, ip: &apos;172.18.16.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+System info: host: &apos;DESKTOP-PA5U02U&apos;, ip: &apos;172.17.128.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [01058f0ffcc07d1ba2de6aa8f655d14f, isElementDisplayed {id=f4692132-7532-4497-87d8-f089397ee4df}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Chitu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65528/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (01058f0ffcc07d1ba2de6aa8f655d14f)] -&gt; xpath: //*[text()=&apos;Amrit Srivastava&apos;]]
-Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
+Command: [6d7831dc03ed0bed7fc9c32a899a8760, findElement {using=xpath, value=//*[text()=&apos;Subhankar Sahoo&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Chitu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64827/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d7831dc03ed0bed7fc9c32a899a8760
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -165,15 +187,12 @@ Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at com.pages.ContactsPage.createNewContact(ContactsPage.java:63)
-	at com.test.ContactsPageTest.validateUserIsAbleToCreateANewContact(ContactsPageTest.java:65)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at com.pages.HomePage.verifyUserInHomePage(HomePage.java:80)
+	at com.test.HomePageTest.validateHomePage(HomePageTest.java:47)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -183,22 +202,28 @@ Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
           <div class="suite-CRMPRO_Application-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.test.ContactsPageTest</span>
+              <span class="class-name">com.test.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateUserIsAbleToCreateANewContact(Subhankar, sahoo, TCS, abc@256)">
-                  </a> <!-- validateUserIsAbleToCreateANewContact(Subhankar, sahoo, TCS, abc@256) -->
-                  <span class="method-name">validateUserIsAbleToCreateANewContact</span>
-                  <span class="parameters">(Subhankar, sahoo, TCS, abc@256)</span>
+                  <a name="validateLoginPageTitle">
+                  </a> <!-- validateLoginPageTitle -->
+                  <span class="method-name">validateLoginPageTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateUserOnContactsPage">
-                  </a> <!-- validateUserOnContactsPage -->
-                  <span class="method-name">validateUserOnContactsPage</span>
+                  <a name="validateUserInLoginPageOfCRMApplication">
+                  </a> <!-- validateUserInLoginPageOfCRMApplication -->
+                  <span class="method-name">validateUserInLoginPageOfCRMApplication</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateUserLogin">
+                  </a> <!-- validateUserLogin -->
+                  <span class="method-name">validateUserLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -213,16 +238,13 @@ Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;CRMPRO Application&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.listeners.AllureListener&quot;/&gt;
-  &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Application login&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Application Page Functionalities&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.test.LoginPageTest&quot;/&gt;
       &lt;class name=&quot;com.test.HomePageTest&quot;/&gt;
       &lt;class name=&quot;com.test.ContactsPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Application login --&gt;
+  &lt;/test&gt; &lt;!-- Application Page Functionalities --&gt;
 &lt;/suite&gt; &lt;!-- CRMPRO Application --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -234,7 +256,7 @@ Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Application login (3 classes)</span>
+                <span class="test-name">Application Page Functionalities (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -260,24 +282,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateUserIsAbleToCreateANewContact')
-data.setCell(0, 2, 'com.test.ContactsPageTest')
-data.setCell(0, 3, 6201);
+data.setCell(0, 1, 'validateClickingOnContactsLink')
+data.setCell(0, 2, 'com.test.HomePageTest')
+data.setCell(0, 3, 40205);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateUserIsAbleToCreateANewContact')
-data.setCell(1, 2, 'com.test.ContactsPageTest')
-data.setCell(1, 3, 5922);
+data.setCell(1, 1, 'validateHomePage')
+data.setCell(1, 2, 'com.test.HomePageTest')
+data.setCell(1, 3, 40170);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validateUserOnContactsPage')
-data.setCell(2, 2, 'com.test.ContactsPageTest')
-data.setCell(2, 3, 247);
+data.setCell(2, 1, 'validateUserLogin')
+data.setCell(2, 2, 'com.test.LoginPageTest')
+data.setCell(2, 3, 11743);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateUserInLoginPageOfCRMApplication')
+data.setCell(3, 2, 'com.test.LoginPageTest')
+data.setCell(3, 3, 470);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateLoginPageTitle')
+data.setCell(4, 2, 'com.test.LoginPageTest')
+data.setCell(4, 3, 47);
 window.suiteTableData['CRMPRO_Application']= { tableData: data, tableDiv: 'times-div-CRMPRO_Application'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-CRMPRO_Application">
               </div> <!-- times-div-CRMPRO_Application -->
             </div> <!-- times-div -->
@@ -292,26 +322,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-CRMPRO_Application" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.test.LoginPageTest</span>
+              <span class="ignored-class-name">com.test.ContactsPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">validateUserLogin</span>
+                <span class="ignored-method-name">validateUserOnContactsPage</span>
                 <br/>
-                <span class="ignored-method-name">validateUserInLoginPageOfCRMApplication</span>
+                <span class="ignored-method-name">allureDirectoryEmpty</span>
                 <br/>
-                <span class="ignored-method-name">validateLoginPageTitle</span>
+                <span class="ignored-method-name">validateUserIsAbleToCreateANewContact</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.test.HomePageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">validateHomePage</span>
-                <br/>
-                <span class="ignored-method-name">validateClickingOnContactsLink</span>
+                <span class="ignored-method-name">allureDirectoryEmpty</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -328,46 +356,81 @@ return data;
                 <span class="method-name">allureDirectoryEmpty</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">547 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateUserInLoginPageOfCRMApplication</span>
+                <span class="method-start">23409 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">23897 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.ContactsPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">527 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validateUserOnContactsPage</span>
-                <span class="method-start">21429 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">21681 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">24475 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validateUserIsAbleToCreateANewContact(Subhankar, sahoo, TCS, abc@256)</span>
-                <span class="method-start">40824 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">47135 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">48243 ms</span>
+                <span class="method-start">24702 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validateUserIsAbleToCreateANewContact(Amrit, Srivastava, Eli Lilly, uvc@456)</span>
-                <span class="method-start">64702 ms</span>
+                <span class="method-name">validateHomePage</span>
+                <span class="method-start">59882 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">70913 ms</span>
+                <span class="method-start">100067 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">100877 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateLoginPageTitle</span>
+                <span class="method-start">122021 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">122071 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">122835 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateClickingOnContactsLink</span>
+                <span class="method-start">145377 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">185911 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">186897 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateUserLogin</span>
+                <span class="method-start">206995 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">218742 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

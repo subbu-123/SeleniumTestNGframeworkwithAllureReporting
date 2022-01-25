@@ -12,13 +12,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import com.base.BaseClass;
+import com.base.BaseTest;
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
-public class utilityClass extends BaseClass{
+public class utilityClass extends BaseTest{
 
 	
 	public static List<Object[]> getDataFromExcel(String excelPath, String sheetname) throws FilloException

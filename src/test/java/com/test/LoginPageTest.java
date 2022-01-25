@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.base.BaseClass;
+import com.base.BaseTest;
 import com.pages.HomePage;
 import com.pages.LoginPage;
 
@@ -20,9 +20,10 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-public class LoginPageTest extends BaseClass {
+public class LoginPageTest extends BaseTest {
 	
 	LoginPage lp; 
+
 	
 	// here LoginPageTest constructor calls its parent class constructor i.e of base class so that config file is read without throwing any errors
 	public LoginPageTest()
@@ -30,7 +31,8 @@ public class LoginPageTest extends BaseClass {
 		super();
 	}
 	
-	@BeforeSuite
+	// As a best practice we should not include pre requisites & post requisites in test case class 
+/*	@BeforeSuite
 	public void allureDirectoryEmpty() throws IOException
 	{
 		FileUtils.deleteDirectory(new File("./allure-results"));
@@ -42,6 +44,7 @@ public class LoginPageTest extends BaseClass {
 		initialize();
 		lp = new LoginPage(); 
 	}
+*/	
 	
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Verify user lands on login page after entering the url")
@@ -50,6 +53,7 @@ public class LoginPageTest extends BaseClass {
 	public void validateUserInLoginPageOfCRMApplication()
 
 	{
+		lp = page.getInstance(LoginPage.class);
 		boolean flag = lp.verifyLoginPage();
 		Assert.assertTrue(flag);
 	}
@@ -61,8 +65,9 @@ public class LoginPageTest extends BaseClass {
 	public void validateLoginPageTitle()
 
 	{
+		lp = page.getInstance(LoginPage.class);
 		String title = lp.verifyLoginPageTitle();
-		Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.");
+		Assert.assertEquals(title, " CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}
 	
 	@Severity(SeverityLevel.BLOCKER)
@@ -72,6 +77,7 @@ public class LoginPageTest extends BaseClass {
 	public void validateUserLogin()
 
 	{
+		lp = page.getInstance(LoginPage.class);
 		HomePage hp =lp.login(prop.getProperty("Username"), prop.getProperty("Password"));
 		
 	}
@@ -79,9 +85,11 @@ public class LoginPageTest extends BaseClass {
 	
 	
 
-	@AfterMethod
+/*	@AfterMethod
 	public void teardown()
 	{
 		driver.quit();
 	}
+*/	
+	
 }

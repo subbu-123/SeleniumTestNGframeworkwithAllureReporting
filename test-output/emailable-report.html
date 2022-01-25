@@ -9,20 +9,25 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">CRMPRO Application</th></tr>
-<tr><td><a href="#t0">Application login</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">71,738</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Application Page Functionalities</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">2</td><td class="num">219,596</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CRMPRO Application</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Application login &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.test.ContactsPageTest</td><td><a href="#m0">validateUserIsAbleToCreateANewContact</a></td><td rowspan="1">1642223856730</td><td rowspan="1">5922</td></tr><tr><th colspan="4">Application login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.test.ContactsPageTest</td><td><a href="#m1">validateUserIsAbleToCreateANewContact</a></td><td rowspan="1">1642223832852</td><td rowspan="1">6201</td></tr><tr class="passedeven"><td><a href="#m2">validateUserOnContactsPage</a></td><td rowspan="1">1642223813457</td><td rowspan="1">247</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CRMPRO Application</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Application Page Functionalities &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.test.HomePageTest</td><td><a href="#m0">validateClickingOnContactsLink</a></td><td rowspan="1">1643013894152</td><td rowspan="1">40205</td></tr><tr class="failedeven"><td><a href="#m1">validateHomePage</a></td><td rowspan="1">1643013808657</td><td rowspan="1">40170</td></tr><tr><th colspan="4">Application Page Functionalities &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.test.LoginPageTest</td><td><a href="#m2">validateLoginPageTitle</a></td><td rowspan="1">1643013870796</td><td rowspan="1">47</td></tr><tr class="passedeven"><td><a href="#m3">validateUserInLoginPageOfCRMApplication</a></td><td rowspan="1">1643013772184</td><td rowspan="1">470</td></tr><tr class="passedeven"><td><a href="#m4">validateUserLogin</a></td><td rowspan="1">1643013955770</td><td rowspan="1">11743</td></tr></tbody>
 </table>
-<h2>Application login</h2><h3 id="m0">com.test.ContactsPageTest#validateUserIsAbleToCreateANewContact</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Amrit</td><td>Srivastava</td><td>Eli Lilly</td><td>uvc@456</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+<h2>Application Page Functionalities</h2><h3 id="m0">com.test.HomePageTest#validateClickingOnContactsLink</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Must provide a location for a move action.
+	at org.openqa.selenium.interactions.MoveMouseAction.&lt;init&gt;(MoveMouseAction.java:37)
+	at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:362)
+	at com.pages.HomePage.clickOnContactsLink(HomePage.java:89)
+	at com.test.HomePageTest.validateClickingOnContactsLink(HomePageTest.java:60)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.test.HomePageTest#validateHomePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;Subhankar Sahoo&apos;]&quot;}
   (Session info: chrome=97.0.4692.71)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-PA5U02U&apos;, ip: &apos;172.18.16.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
+System info: host: &apos;DESKTOP-PA5U02U&apos;, ip: &apos;172.17.128.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [01058f0ffcc07d1ba2de6aa8f655d14f, isElementDisplayed {id=f4692132-7532-4497-87d8-f089397ee4df}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Chitu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65528/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (01058f0ffcc07d1ba2de6aa8f655d14f)] -&gt; xpath: //*[text()=&apos;Amrit Srivastava&apos;]]
-Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
+Command: [6d7831dc03ed0bed7fc9c32a899a8760, findElement {using=xpath, value=//*[text()=&apos;Subhankar Sahoo&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Chitu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64827/devtoo..., se:cdpVersion: 97.0.4692.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6d7831dc03ed0bed7fc9c32a899a8760
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -30,17 +35,15 @@ Session ID: 01058f0ffcc07d1ba2de6aa8f655d14f
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at com.pages.ContactsPage.createNewContact(ContactsPage.java:63)
-	at com.test.ContactsPageTest.validateUserIsAbleToCreateANewContact(ContactsPageTest.java:65)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at com.pages.HomePage.verifyUserInHomePage(HomePage.java:80)
+	at com.test.HomePageTest.validateHomePage(HomePageTest.java:47)
 ... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.test.ContactsPageTest#validateUserIsAbleToCreateANewContact</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Subhankar</td><td>sahoo</td><td>TCS</td><td>abc@256</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.test.ContactsPageTest#validateUserOnContactsPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.test.LoginPageTest#validateLoginPageTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.test.LoginPageTest#validateUserInLoginPageOfCRMApplication</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.test.LoginPageTest#validateUserLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

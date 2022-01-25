@@ -9,13 +9,14 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.base.BaseClass;
+import com.base.BasePage;
+import com.base.BaseTest;
 
 import io.qameta.allure.Attachment;
 
-public class AllureListener implements ITestListener{
+public class AllureListener extends BaseTest implements ITestListener {
 	
-	
+
 	public static String getTestMethodName(ITestResult result)
 	{
 		return result.getMethod().getConstructorOrMethod().getName();
@@ -33,6 +34,7 @@ public class AllureListener implements ITestListener{
 		return message;
 	}
 
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -49,8 +51,10 @@ public class AllureListener implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		
-		WebDriver driver = BaseClass.returnDriver();
-		getScreenshot(driver);
+		//page = new BasePage(driver);
+		//WebDriver driver = page.returnDriver();
+		System.out.println(result.getTestClass().getName());
+		getScreenshot(driver);  
 		saveTextLog(getTestMethodName(result) + " is failed and following exception occured: " +result.getThrowable().toString().replaceAll(",", "<br>"));
 	}
 

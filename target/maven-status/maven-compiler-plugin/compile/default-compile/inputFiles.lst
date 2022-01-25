@@ -1,11 +1,13 @@
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\Retry.java
+F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\ExtentManager.java
+F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\utilities\utilityClass.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\pages\ContactsPage.java
+F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\base\BasePage.java
+F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\base\BaseTest.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\pages\LoginPage.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\pages\HomePage.java
-F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\base\BaseClass.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\RetryListener.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\AllureListener.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\ExtentTestManager.java
 F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\ExtentListener.java
-F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\listeners\ExtentManager.java
-F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\utilities\utilityClass.java
+F:\eclipse-workspace\CRMApplicationFramework\src\main\java\com\base\Page.java

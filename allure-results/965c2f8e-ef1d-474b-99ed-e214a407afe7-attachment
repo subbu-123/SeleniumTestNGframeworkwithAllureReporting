@@ -1,1 +1,0 @@
-validateUserIsAbleToCreateANewContact is failed and following exception occured: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@name='first_name1']' (tried for 20 second(s) with 500 milliseconds interval)

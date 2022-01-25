@@ -14,16 +14,16 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.base.BaseClass;
+import com.base.BasePage;
+import com.base.BaseTest;
 import com.utilities.utilityClass;
 
 
-public class ExtentListener implements ITestListener {
+public class ExtentListener extends BaseTest implements ITestListener {
 
 
 	private static ExtentReports extent = ExtentManager.getInstance();
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
-	
 	
 
 	public void onFinish(ITestContext arg0) {
@@ -51,8 +51,6 @@ public class ExtentListener implements ITestListener {
 		// TODO Auto-generated method stub
 
 		try {
-	
-			WebDriver driver = BaseClass.returnDriver();
 			
 			//String Path = utilityClass.getScreenshot(driver, result.getName());
 			String base64Path= utilityClass.getScreenshotAsBase64(driver);

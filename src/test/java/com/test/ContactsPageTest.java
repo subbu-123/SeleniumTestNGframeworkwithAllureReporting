@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.base.BaseClass;
+import com.base.BaseTest;
 import com.codoid.products.exception.FilloException;
 import com.pages.ContactsPage;
 import com.pages.HomePage;
@@ -22,21 +22,22 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-
-public class ContactsPageTest extends BaseClass{
+public class ContactsPageTest extends BaseTest{
 
 	LoginPage lp;
 	HomePage hp;
-	ContactsPage cp;
+	ContactsPage cp;    
 	utilityClass uc;
 
+	
+	
 	// here HomePageTest constructor calls its parent class constructor i.e of base
 	// class so that config file is read without throwing any errors
 	public ContactsPageTest() {
 		super();
 	}
 
-	@BeforeMethod
+/*	@BeforeMethod
 	public void setup() {
 		initialize();
 		uc = new utilityClass();
@@ -44,7 +45,7 @@ public class ContactsPageTest extends BaseClass{
 		hp = lp.login(prop.getProperty("Username"), prop.getProperty("Password"));
 		cp = hp.clickOnContactsLink();
 	}
-	
+*/	
 	
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Verify user is navigated to contacts page from home page")
@@ -53,6 +54,9 @@ public class ContactsPageTest extends BaseClass{
 	public void validateUserOnContactsPage()
 
 	{
+		lp = page.getInstance(LoginPage.class);
+		hp = lp.login(prop.getProperty("Username"), prop.getProperty("Password"));
+		cp= hp.clickOnContactsLink();
 		Assert.assertTrue(cp.validateUserInContactsPage());
 		
 	}
@@ -64,6 +68,9 @@ public class ContactsPageTest extends BaseClass{
 	public void validateUserIsAbleToCreateANewContact(String firstname, String lastname, String company, String emailID)
 
 	{
+		lp = page.getInstance(LoginPage.class);
+		hp = lp.login(prop.getProperty("Username"), prop.getProperty("Password"));
+		cp= hp.clickOnContactsLink();
 		Assert.assertTrue(cp.createNewContact(firstname, lastname, company, emailID));
 		
 	}
@@ -74,11 +81,11 @@ public class ContactsPageTest extends BaseClass{
 		return data.iterator();
 	}
 	
-
+/*
 	@AfterMethod
 	public void teardown()
 	{
 		driver.quit();
 	}
-	
+*/	
 }
