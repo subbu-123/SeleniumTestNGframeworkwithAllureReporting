@@ -22,11 +22,12 @@ public class HomePageTest extends BaseTest {
 	HomePage hp;
 
 	
-	// here HomePageTest constructor calls its parent class constructor i.e of base
+/*	// here HomePageTest constructor calls its parent class constructor i.e of base
 	// class so that config file is read without throwing any errors
 	public HomePageTest() {
 		super();
 	}
+*/
 
 /*	@BeforeMethod
 	public void setup() {

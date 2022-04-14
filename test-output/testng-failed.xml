@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CRMPRO Application]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.listeners.ExtentListener"/>
+    <listener class-name="com.listeners.AllureListener"/>
+  </listeners>
   <test thread-count="5" name="Application Page Functionalities(failed)">
     <classes>
-      <class name="com.test.HomePageTest">
+      <class name="com.test.LoginPageTest">
         <methods>
           <include name="setup"/>
+          <include name="validateLoginPageTitle"/>
           <include name="allureDirectoryEmpty"/>
-          <include name="validateHomePage"/>
-          <include name="validateClickingOnContactsLink"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.test.HomePageTest -->
+      </class> <!-- com.test.LoginPageTest -->
     </classes>
   </test> <!-- Application Page Functionalities(failed) -->
 </suite> <!-- Failed suite [CRMPRO Application] -->

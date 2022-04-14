@@ -22,7 +22,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	public static WebDriver driver;
+	public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<WebDriver>();
 	public static Properties prop = new Properties();
 	public Page page;   // page class object
 	
@@ -49,28 +49,32 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 		/*	ChromeOptions co = new ChromeOptions();
 			co.addArguments("--headless");   */
-			driver = new ChromeDriver();
+			tldriver.set(new ChromeDriver());
 		}
 		
 		else if(prop.getProperty("Browser").equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			tldriver.set(new FirefoxDriver());
 		}
 		else
 		{
 			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver();
+			tldriver.set(new InternetExplorerDriver());
 		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get(prop.getProperty("Url"));
+		getDriver().manage().window().maximize();
+		//getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		getDriver().get(prop.getProperty("Url"));
 	}
 	
 	
-	/*
-	 * public static WebDriver returnDriver() { return driver; }
-	 */
+	
+	  public static WebDriver getDriver() 
+	  { 
+		 return tldriver.get();
+	  }
+	 
 
 	
 	
@@ -84,14 +88,14 @@ public class BaseTest {
 	public void setup()
 	{
 		initialize();
-		page = new BasePage(driver);
+		page = new BasePage(getDriver());
 	}
 
 	
 	@AfterMethod
 	public void teardown()
 	{
-		driver.quit();
+		getDriver().quit();
 	}
 
 }

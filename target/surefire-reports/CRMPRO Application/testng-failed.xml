@@ -9,6 +9,7 @@
     <classes>
       <class name="com.test.LoginPageTest">
         <methods>
+          <include name="validateUserLogin"/>
           <include name="setup"/>
           <include name="validateLoginPageTitle"/>
           <include name="allureDirectoryEmpty"/>
@@ -20,9 +21,18 @@
           <include name="setup"/>
           <include name="allureDirectoryEmpty"/>
           <include name="validateHomePage"/>
+          <include name="validateClickingOnContactsLink"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.test.HomePageTest -->
+      <class name="com.test.ContactsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="allureDirectoryEmpty"/>
+          <include name="validateUserIsAbleToCreateANewContact" invocation-numbers="0 1"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.test.ContactsPageTest -->
     </classes>
   </test> <!-- Application Page Functionalities(failed) -->
 </suite> <!-- Failed suite [CRMPRO Application] -->

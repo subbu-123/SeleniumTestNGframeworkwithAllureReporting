@@ -19,7 +19,7 @@ import com.base.BaseTest;
 import com.utilities.utilityClass;
 
 
-public class ExtentListener extends BaseTest implements ITestListener {
+public class ExtentListener implements ITestListener {
 
 
 	private static ExtentReports extent = ExtentManager.getInstance();
@@ -53,7 +53,7 @@ public class ExtentListener extends BaseTest implements ITestListener {
 		try {
 			
 			//String Path = utilityClass.getScreenshot(driver, result.getName());
-			String base64Path= utilityClass.getScreenshotAsBase64(driver);
+			String base64Path= utilityClass.getScreenshotAsBase64(BaseTest.getDriver());
 			String exceptionMessage = Arrays.toString(result.getThrowable().getStackTrace());
 
 			testReport.get().log(Status.FAIL,

@@ -1,0 +1,1 @@
+{"uuid":"ad1008d3-f5cb-4f8e-8942-1b90b383f262","name":"CRMPRO Application","children":["71d37c87-ef14-493d-b29d-b0e7b2539f60"],"befores":[{"name":"allureDirectoryEmpty","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1649925477166,"stop":1649925477205}],"afters":[],"links":[],"start":1649925477091,"stop":1649925630604}

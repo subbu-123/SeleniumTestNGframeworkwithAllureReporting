@@ -8,9 +8,11 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.base.BaseTest;
 import com.codoid.products.exception.FilloException;
@@ -65,5 +67,11 @@ public class utilityClass extends BaseTest{
 		return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 
 	}
+	
+	public static void highLighterMethod(WebDriver driver, WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+	}
+
 	
 }

@@ -31,11 +31,12 @@ public class ContactsPageTest extends BaseTest{
 
 	
 	
-	// here HomePageTest constructor calls its parent class constructor i.e of base
+/*	// here HomePageTest constructor calls its parent class constructor i.e of base
 	// class so that config file is read without throwing any errors
 	public ContactsPageTest() {
 		super();
 	}
+*/
 
 /*	@BeforeMethod
 	public void setup() {

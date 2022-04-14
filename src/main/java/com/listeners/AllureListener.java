@@ -14,7 +14,7 @@ import com.base.BaseTest;
 
 import io.qameta.allure.Attachment;
 
-public class AllureListener extends BaseTest implements ITestListener {
+public class AllureListener implements ITestListener {
 	
 
 	public static String getTestMethodName(ITestResult result)
@@ -53,8 +53,8 @@ public class AllureListener extends BaseTest implements ITestListener {
 		
 		//page = new BasePage(driver);
 		//WebDriver driver = page.returnDriver();
-		System.out.println(result.getTestClass().getName());
-		getScreenshot(driver);  
+
+		getScreenshot(BaseTest.getDriver());  
 		saveTextLog(getTestMethodName(result) + " is failed and following exception occured: " +result.getThrowable().toString().replaceAll(",", "<br>"));
 	}
 

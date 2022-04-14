@@ -25,11 +25,12 @@ public class LoginPageTest extends BaseTest {
 	LoginPage lp; 
 
 	
-	// here LoginPageTest constructor calls its parent class constructor i.e of base class so that config file is read without throwing any errors
+/*  // here LoginPageTest constructor calls its parent class constructor i.e of base class so that config file is read without throwing any errors
 	public LoginPageTest()
 	{
 		super();
-	}
+	}  
+*/
 	
 	// As a best practice we should not include pre requisites & post requisites in test case class 
 /*	@BeforeSuite
