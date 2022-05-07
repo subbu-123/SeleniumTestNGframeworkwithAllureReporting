@@ -1,0 +1,17 @@
+18:58:20.757 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateUserInLoginPageOfCRMApplication has started*********************
+18:58:21.305 [main] INFO  com.listeners.ExtentListener - Test case: validateUserInLoginPageOfCRMApplication is passed
+18:58:30.065 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateHomePage has started*********************
+18:58:41.752 [main] INFO  com.listeners.ExtentListener - Test case: validateHomePage is passed
+18:58:50.839 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateUserOnContactsPage has started*********************
+18:58:59.636 [main] INFO  com.listeners.ExtentListener - Test case: validateUserOnContactsPage is passed
+18:59:09.068 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateLoginPageTitle has started*********************
+18:59:09.099 [main] ERROR com.listeners.ExtentListener - Test case: validateLoginPageTitle is failed
+18:59:09.100 [main] ERROR com.listeners.ExtentListener - Failure reason: java.lang.AssertionError: expected [ CRMPRO - CRM software for customer relationship management<br> sales<br> and support.] but found [CRMPRO - CRM software for customer relationship management<br> sales<br> and support.]
+18:59:20.656 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateClickingOnContactsLink has started*********************
+18:59:30.463 [main] INFO  com.listeners.ExtentListener - Test case: validateClickingOnContactsLink is passed
+18:59:40.654 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateUserIsAbleToCreateANewContact has started*********************
+18:59:56.076 [main] INFO  com.listeners.ExtentListener - Test case: validateUserIsAbleToCreateANewContact is passed
+19:00:04.309 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateUserIsAbleToCreateANewContact has started*********************
+19:00:22.731 [main] INFO  com.listeners.ExtentListener - Test case: validateUserIsAbleToCreateANewContact is passed
+19:00:31.383 [main] INFO  com.listeners.ExtentListener - ***************Test case: validateUserLogin has started*********************
+19:00:37.551 [main] INFO  com.listeners.ExtentListener - Test case: validateUserLogin is passed

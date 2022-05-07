@@ -1,0 +1,21 @@
+# Created at 2022-05-07T18:47:23.820
+[AppClassLoader@5451c3a8] error at io\qameta\allure\aspects\StepsAspects.java::0 the @annotation pointcut expression is only supported at Java 5 compliance level or above
+
+# Created at 2022-05-07T18:47:23.826
+[AppClassLoader@5451c3a8] error at io\qameta\allure\aspects\AttachmentsAspects.java::0 the @annotation pointcut expression is only supported at Java 5 compliance level or above
+
+# Created at 2022-05-07T18:49:18.063
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2022-05-07T18:49:18.064
+WARNING: Illegal reflective access by org.apache.poi.openxml4j.util.ZipSecureFile$1 (file:/C:/Users/Chitu/AppData/Local/Temp/surefire6957394196269361115/..%5C..%5C..%5C..%5C.m2%5Crepository%5Ccom%5Ccodoid%5Cproducts%5Cfillo%5C1.18%5Cfillo-1.18.jar) to field java.io.FilterInputStream.in
+
+# Created at 2022-05-07T18:49:18.065
+WARNING: Please consider reporting this to the maintainers of org.apache.poi.openxml4j.util.ZipSecureFile$1
+
+# Created at 2022-05-07T18:49:18.066
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2022-05-07T18:49:18.067
+WARNING: All illegal access operations will be denied in a future release
+

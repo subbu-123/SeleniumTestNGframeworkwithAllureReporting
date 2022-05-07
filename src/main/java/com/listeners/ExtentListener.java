@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -21,7 +23,7 @@ import com.utilities.utilityClass;
 
 public class ExtentListener implements ITestListener {
 
-
+	private static Logger log = LogManager.getLogger(ExtentListener.class);
 	private static ExtentReports extent = ExtentManager.getInstance();
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
 	
@@ -51,6 +53,8 @@ public class ExtentListener implements ITestListener {
 		// TODO Auto-generated method stub
 
 		try {
+			log.error("Test case: " + result.getMethod().getMethodName() + " is failed");
+			log.error("Failure reason: " + result.getThrowable().toString());
 			
 			//String Path = utilityClass.getScreenshot(driver, result.getName());
 			String base64Path= utilityClass.getScreenshotAsBase64(BaseTest.getDriver());
@@ -77,6 +81,7 @@ public class ExtentListener implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
 		
+		log.info("Test case: " + result.getMethod().getMethodName() + " is skipped");		
 		
 		testReport.get().log(Status.SKIP, "Test Case " +
 		  result.getMethod().getConstructorOrMethod().getName().toUpperCase() +
@@ -88,6 +93,7 @@ public class ExtentListener implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		
+		log.info("***************Test case: " + result.getMethod().getMethodName() + " has started*********************");
 		
 		ExtentTest test = extent.createTest(result.getTestClass().getName() +
 		  "     @TestCase : " + result.getMethod().getMethodName());
@@ -98,7 +104,7 @@ public class ExtentListener implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		
-		
+		log.info("Test case: " + result.getMethod().getMethodName() + " is passed");
 		
 		testReport.get().log(Status.PASS, "Test Case " +
 		  result.getMethod().getConstructorOrMethod().getName().toUpperCase() +

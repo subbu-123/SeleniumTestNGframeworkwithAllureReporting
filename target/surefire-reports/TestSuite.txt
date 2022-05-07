@@ -1,28 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 272.014 s <<< FAILURE! - in TestSuite
-com.test.HomePageTest.validateHomePage  Time elapsed: 26.098 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.test.HomePageTest.validateHomePage(HomePageTest.java:47)
-
-com.test.LoginPageTest.validateLoginPageTitle  Time elapsed: 0.038 s  <<< FAILURE!
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 159.323 s <<< FAILURE! - in TestSuite
+validateLoginPageTitle(com.test.LoginPageTest)  Time elapsed: 0.919 s  <<< FAILURE!
 java.lang.AssertionError: expected [ CRMPRO - CRM software for customer relationship management, sales, and support.] but found [CRMPRO - CRM software for customer relationship management, sales, and support.]
 	at com.test.LoginPageTest.validateLoginPageTitle(LoginPageTest.java:71)
-
-com.test.HomePageTest.validateClickingOnContactsLink  Time elapsed: 49.802 s  <<< FAILURE!
-java.lang.IllegalArgumentException: Must provide a location for a move action.
-	at com.test.HomePageTest.validateClickingOnContactsLink(HomePageTest.java:62)
-
-com.test.ContactsPageTest.validateUserIsAbleToCreateANewContact[Subhankar, sahoo, TCS, abc@256](1)  Time elapsed: 25.498 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.test.ContactsPageTest.validateUserIsAbleToCreateANewContact(ContactsPageTest.java:73)
-
-com.test.ContactsPageTest.validateUserIsAbleToCreateANewContact[Amrit, Srivastava, Eli Lilly, uvc@456](2)  Time elapsed: 24.205 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.test.ContactsPageTest.validateUserIsAbleToCreateANewContact(ContactsPageTest.java:73)
-
-com.test.LoginPageTest.validateUserLogin  Time elapsed: 25.641 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.test.LoginPageTest.validateUserLogin(LoginPageTest.java:82)
 
